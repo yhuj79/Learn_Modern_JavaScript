@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    background-color: black;
+    --mainBackColor: blue;
+    --mainFontColor: white;
+    --mainSectionColor: teal;
+    font-family: "Roboto";
+}
+
+.header {
+    margin: 30px;
+    padding: 30px;
+    background-color: var(--mainBackColor);
+    color: var(--mainFontColor);
+}
+
+.section {
+    margin: 30px;
+    padding: 5px 30px;
+    background-color: var(--mainSectionColor);
+    color: var(--mainFontColor);
+}
