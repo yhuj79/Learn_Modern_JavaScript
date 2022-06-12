@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else (Two)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Javascript Fundamentals</h1>
+    <div class="section">
+        <h1>if else - Two</h1>
+    </div>
+    <div class="section">
+        <h2 class="printDiv"></h2>
+        <button class="button" onclick="buttonOne()">Button One</button>
+        <button class="button" onclick="buttonTwo()">Button Two</button>
+    </div>
+</body>
+
+<script>
+    const printDiv = document.querySelector(".printDiv");
+    printDiv.innerHTML = "Hello";
+
+    function buttonOne() {
+        printDiv.innerHTML = "Button One!";
+    }
+    function buttonTwo() {
+        printDiv.innerHTML = "Button Two!";
+    }
+</script>
+
+</html>
