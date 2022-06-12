@@ -29,3 +29,11 @@
     font-size: 18px;
     border-radius: 8px;
 }
+
+.inputOne, .inputTwo {
+    width: 200px;
+    height: 42px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 20px;
+}

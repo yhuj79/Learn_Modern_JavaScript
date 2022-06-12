@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical operators</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Javascript Fundamentals</h1>
+    <div class="section">
+        <h1>Logical operators</h1>
+    </div>
+    <div class="section">
+        <h2 class="printDivOne">1 ~ 10 의 숫자를 입력하세요.</h2>
+        <input type="text" class="inputOne" value="" placeholder="숫자 입력하기">
+        <button class="button" onclick="onClickAnd()">Check</button>
+    </div>
+    <div class="section">
+        <h2 class="printDivTwo">입력창에 숫자 7은 입력하지 마세요.</h2>
+        <input type="text" class="inputTwo" value="" placeholder="숫자 입력하기">
+        <button class="button" onclick="onClickNot()">Check</button>
+    </div>
+</body>
+
+<script>
+    function onClickAnd() {
+        const printDivOne = document.querySelector(".printDivOne");
+        const inputValueOne = document.querySelector(".inputOne").value;
+
+        if (inputValueOne > 5 && inputValueOne <= 10) {
+            printDivOne.innerHTML = "5보다 큰 숫자입니다.";
+        }
+        else if (inputValueOne > 0 && inputValueOne <= 5) {
+            printDivOne.innerHTML = "5보다 크지는 않은 숫자입니다.";
+        }
+        else {
+            printDivOne.innerHTML = "1 ~ 10 의 숫자가 아니거나 숫자가 아닙니다.";
+        }
+    }
+    function onClickNot() {
+        const printDivTwo = document.querySelector(".printDivTwo");
+        const inputValueTwo = document.querySelector(".inputTwo").value;
+
+        if (inputValueTwo != 7) {
+            printDivTwo.innerHTML = "잘 입력 하셨습니다.";
+        }
+        else {
+            printDivTwo.innerHTML = "입력하지 말라니깐요.";
+        }
+    }
+</script>
+
+</html>
