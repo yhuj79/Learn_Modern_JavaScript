@@ -2,13 +2,13 @@
 
 ## :low_brightness: <a target="_blank" rel="noopener noreferrer" href="https://ko.javascript.info">Modern JavaScript Tutorial</a>
 
-### 코어 자바스크립트
+### 1: 코어 자바스크립트
 
 #### :one: [소개](https://ko.javascript.info/getting-started)
 
-#### :two: [자바스크립트 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/01JavaScriptFundamentals)
+#### :two: [자바스크립트 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-01JavaScriptFundamentals)
 
-#### :three: [코드 품질](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/02CodeQuality)
+#### :three: [코드 품질](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-02CodeQuality)
 
 #### :four: [객체: 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
@@ -32,7 +32,7 @@
 
 #### :one::four: [기타](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
-### 브라우저: 문서, 이벤트, 인터페이스
+### 2: 브라우저: 문서, 이벤트, 인터페이스
 
 #### :one: [문서](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
@@ -46,7 +46,7 @@
 
 #### :six: [기타](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
-### 추가 주제
+### 3: 추가 주제
 
 #### :one: [프레임과 윈도우](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
