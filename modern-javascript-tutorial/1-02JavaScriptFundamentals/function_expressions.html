@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expressions</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="header">Javascript Fundamentals</h1>
+    <div class="section">
+        <h1>Function Expressions</h1>
+    </div>
+    <div class="section">
+        <h2 class="printDivOne"></h2>
+        <h2 class="printDivTwo"></h2>
+    </div>
+</body>
+
+<script>
+    // CalledBack
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    ask(
+        "동의하십니까?",
+        function() {alert("동의하셨습니다.");},
+        function() {alert("취소하셨습니다.");}
+    );
+
+    // 함수 표현식
+    function funcName(name) {
+        const printDivOne = document.querySelector(".printDivOne");
+        printDivOne.innerHTML = `안녕하세요, ${name} 입니다.`;
+    }
+    function funcBirth(birth) {
+        const printDivTwo = document.querySelector(".printDivTwo");
+        printDivTwo.innerHTML = `생일은 ${birth} 입니다.`;
+    }
+
+    // funcName("yhuj79");
+    // funcBirth("7월 9일");
+
+    let CopyfuncName = funcName; // 함수 복사
+    let CopyfuncBirth = funcBirth;
+
+    CopyfuncName("asdf1234");
+    CopyfuncBirth("12월 31일");
+</script>
+
+</html>
