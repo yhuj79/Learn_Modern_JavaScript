@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="header">Javascript Fundamentals</h1>
+    <div class="section">
+        <h1>Function</h1>
+    </div>
+    <div class="section">
+        <h2 class="printDivOne"></h2>
+        <h2 class="printDivTwo"></h2>
+    </div>
+</body>
+
+<script>
+    function funcName(name) {
+        const printDivOne = document.querySelector(".printDivOne");
+        printDivOne.innerHTML = `안녕하세요, ${name} 입니다.`;
+    }
+    function funcBirth(birth) {
+        const printDivTwo = document.querySelector(".printDivTwo");
+        printDivTwo.innerHTML = `생일은 ${birth} 입니다.`;
+    }
+
+    funcName("yhuj79");
+    funcBirth("7월 9일");
+</script>
+
+</html>

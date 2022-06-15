@@ -6,9 +6,9 @@
 
 #### :one: [소개](https://ko.javascript.info/getting-started)
 
-#### :two: [자바스크립트 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-01JavaScriptFundamentals)
+#### :two: [자바스크립트 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-02JavaScriptFundamentals)
 
-#### :three: [코드 품질](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-02CodeQuality)
+#### :three: [코드 품질](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-03CodeQuality)
 
 #### :four: [객체: 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 
