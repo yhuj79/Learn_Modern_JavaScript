@@ -1,6 +1,4 @@
-# JavaScript Practice
-
-## :low_brightness: <a target="_blank" rel="noopener noreferrer" href="https://ko.javascript.info">Modern JavaScript Tutorial</a>
+# :low_brightness: <a target="_blank" rel="noopener noreferrer" href="https://ko.javascript.info">Modern JavaScript Tutorial</a>
 
 ### 1: 코어 자바스크립트
 
