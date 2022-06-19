@@ -8,7 +8,7 @@
 
 #### :three: [코드 품질](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-03CodeQuality)
 
-#### :four: [객체: 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
+#### :four: [객체: 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-04Objectsthebasics)
 
 #### :five: [자료구조와 자료형](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Objects The Basics</h1>
+    <div class="section">
+        <h1>Object</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+    </div>
+</body>
+
+<script>
+    const base = { // 객체 리터럴 (object literal) 
+        username: "This is USERNAME.",
+        userage: "This is USERAGE.",
+    };
+
+    document.getElementById("ex1").innerHTML = base.username;
+
+    delete base.userage; // 프로퍼티 삭제 (undefined 출력)
+    document.getElementById("ex2").innerHTML = base.userage;
+
+    function makeUser(name, age) {
+        return {
+            name: name,
+            "user's age": age,
+        };
+    }
+
+    let user = makeUser("John", 30);
+
+    // 점 표기법 (dot notation)
+    document.getElementById("ex3").innerHTML = user.name;
+    
+    // 대괄호 표기법(square bracket notation)
+    document.getElementById("ex4").innerHTML = user["user's age"];
+</script>
+
+</html>
