@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object - Methods</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Objects The Basics</h1>
+    <div class="section">
+        <h1>Object - Methods</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+    </div>
+</body>
+
+<script>
+    let dataOne = {
+        dtext_one: "One의 DTEXT1.",
+        dtext_two: "One의 DTEXT2.",
+        dtext_thr: "One의 DTEXT3.",
+
+        inputData(id) {
+            document.getElementById(`ex${id}`).innerHTML =
+                `${this.dtext_one}<br />${this.dtext_two}<br />${this.dtext_thr}`;
+        }
+    }
+    let dataTwo = {
+        dtext_one: "Two의 DTEXT1.",
+        dtext_two: "Two의 DTEXT2.",
+        dtext_thr: "Two의 DTEXT3.",
+
+        inputData(id) {
+            document.getElementById(`ex${id}`).innerHTML =
+                `${this.dtext_one}<br />${this.dtext_two}<br />${this.dtext_thr}`;
+        }
+    }
+
+    dataOne.inputData(1);
+    dataTwo.inputData(2);
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object - Methods</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Objects The Basics</h1>
+    <div class="section">
+        <h1>Optional Chaining</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+    </div>
+</body>
+
+<script>
+    let dataOne = {
+        dtext_one: "One의 DTEXT1.",
+        dtext_two: "One의 DTEXT2.",
+        dtext_thr: "One의 DTEXT3.",
+    }
+
+    document.getElementById("ex1").innerHTML =
+        `${dataOne?.dtext_one}<br />${dataOne?.dtext_two}<br />${dataOne?.dtext_thr}`;
+
+    // 옵셔널 체이닝 테스트 해보기
+    let none = null;
+
+    document.getElementById("ex2").innerHTML =
+        // `${none.dtext_one}`; TypeError: null is not an object (evaluating 'none.dtext_one')
+
+        `${none?.dtext_one}`; // undefined
+    //?.은 ?.'앞’의 평가 대상이 undefined나 null이면 평가를 멈추고 undefined를 반환합니다.
+
+    let dataTwo = {
+        dtext_one: "Two의 DTEXT1.",
+        dtext_two: "Two의 DTEXT2.",
+        dtext_thr: "Two의 DTEXT3.",
+
+        inputData() {
+            document.getElementById("ex3").innerHTML =
+                `${this.dtext_one}<br />${this.dtext_two}<br />${this.dtext_thr}`;
+        }
+    }
+    dataTwo.inputData();
+    dataTwo.errorCode?.(); // ?. 아니면 TypeError: dataTwo.errorCode is not a function.
+</script>
+
+</html>

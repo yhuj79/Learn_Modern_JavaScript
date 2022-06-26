@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object - Copy</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="header">Objects The Basics</h1>
+    <div class="section">
+        <h1>Object - Copy</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+    </div>
+</body>
+
+<script>
+    let dataOne = {
+        dtext_one: "This is DTEXT1.",
+        dtext_two: "This is DTEXT2.",
+        dtext_thr: "This is DTEXT3.",
+    };
+
+    // let dataTwo = {};
+
+    // // 빈 객체에 dataOne 프로퍼티 전부를 복사
+    // for (let key in dataOne) {
+    //     dataTwo[key] = dataOne[key];
+    // }
+
+    // Object.assign을 사용하면 반복문 없이도 간단하게 객체를 복사
+    let dataTwo = Object.assign({}, dataOne);
+
+    document.getElementById("ex1").innerHTML =
+        `${dataOne.dtext_one}<br />${dataOne.dtext_two}<br />${dataOne.dtext_thr}`;
+
+    document.getElementById("ex2").innerHTML =
+        `${dataTwo.dtext_one}<br />${dataTwo.dtext_two}<br />${dataTwo.dtext_thr}`;
+</script>
+
+</html>
