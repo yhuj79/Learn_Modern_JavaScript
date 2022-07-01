@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitives Methods</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Primitives Methods</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+    </div>
+</body>
+
+<script>
+    let john = {
+        name: "John",
+        sayHi: function () {
+            // String / Number / Boolean
+            // new 없이 사용하면 상식에 맞게 인수를 원하는 형의 원시값(문자열, 숫자, 불린 값)으로 바꿔줍니다.
+            const str = String("Hello");
+            
+            document.getElementById(`ex1`).innerHTML = str.toUpperCase();
+            // str은 원시값이므로 원시값의 프로퍼티(toUpperCase)에 접근하는 순간 특별한 객체가 만들어집니다. 
+            // 이 객체는 문자열의 값을 알고 있고, toUpperCase()와 같은 유용한 메서드를 가지고 있습니다.
+            // 메서드가 실행되고, 새로운 문자열이 반환됩니다(`ex1`에 이 문자열이 출력됩니다).
+            // 특별한 객체는 파괴되고, 원시값 str만 남습니다.
+        }
+    };
+
+    john.sayHi();
+    // 이런 내부 프로세스를 통해 원시값을 가볍게 유지하면서 메서드를 호출할 수 있다.
+</script>
+
+</html>

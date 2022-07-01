@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Number</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+    </div>
+</body>
+
+<script>
+    const num1 = 3e8;
+    const num2 = 1.23e6;
+
+    document.getElementById(`ex1`).innerHTML = num1;
+    document.getElementById(`ex2`).innerHTML = num2;
+    document.getElementById(`ex3`).innerHTML = `${num2} 2진법   = ${num2.toString(2)}`;
+    document.getElementById(`ex4`).innerHTML = `${num2} 16진법  = ${num2.toString(16)}`;
+
+    function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+    
+    document.getElementById(`ex5`).innerHTML = `1~200 랜덤 생성 = ${parseInt(getRandomArbitrary(1, 200))}`;
+
+    // https://ko.javascript.info/number
+</script>
+
+</html>

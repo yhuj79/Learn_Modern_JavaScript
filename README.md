@@ -10,7 +10,7 @@
 
 #### :four: [객체: 기본](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-04Objectsthebasics)
 
-#### :five: [자료구조와 자료형](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
+#### :five: [자료구조와 자료형](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/1-05DataTypes)
 
 #### :six: [함수 심화학습](https://github.com/yhuj79/Modern-JavaScript/tree/master/modern-javascript-tutorial/-)
 

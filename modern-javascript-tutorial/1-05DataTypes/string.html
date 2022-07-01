@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>String</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+        <h2 id="ex6"></h2>
+    </div>
+</body>
+
+<script>
+    document.getElementById(`ex1`).innerHTML = `\u{1F60D}`;
+    document.getElementById(`ex2`).innerHTML = "I\'m yhuj79.";
+    document.getElementById(`ex3`).innerHTML = `I'm yhuj79.`;
+
+    let ques = "As sly as a fox, as strong as an ox";
+    document.getElementById(`ex4`).innerHTML = "As sly as a fox, as strong as an ox 에서 as의 위치";
+
+    let target = "as";
+    let pos = -1;
+    while ((pos = ques.indexOf(target, pos + 1)) != -1) {
+        document.getElementById(`ex5`).innerHTML += `${pos} `;
+    }
+
+    const str = "stringify";
+    document.getElementById(`ex6`).innerHTML = str.substring(0, 6);
+
+    // https://ko.javascript.info/string
+</script>
+
+</html>

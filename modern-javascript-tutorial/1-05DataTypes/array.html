@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Array</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+        <h2 id="ex6"></h2>
+    </div>
+</body>
+
+<script>
+    let array1 = ["사과", "배", "수박"];
+    console.time("pop&push");
+    array1.pop();
+    array1.push("오렌지");
+    console.timeEnd("pop&push");
+    document.getElementById("ex1").innerHTML = array1;
+
+    let array2 = ["사과", "배", "수박"];
+    console.time("shift&unshift");
+    array2.shift();
+    array2.unshift("오렌지");
+    console.timeEnd("shift&unshift");
+    document.getElementById("ex2").innerHTML = array2;
+
+    // pop&push 보다 shift&unshift는 느림. 모든 인덱스를 변경하느라 (인덱스 1은 0, 2는 1)
+
+    array2.push("키위", "포도", "딸기", "토마토");
+    for (let array of array2) {
+        document.getElementById("ex3").innerHTML += `${array}&emsp;&emsp;&emsp;`;
+    }
+
+    // 다차원 배열(Multidimensional Array)
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix.length; j++) {
+            document.getElementById("ex4").innerHTML += `${matrix[i][j]}`;
+            document.getElementById("ex4").innerHTML += `\n`;
+        }
+        document.getElementById("ex4").innerHTML += "<br />";
+    }
+
+    let array3 = [1, 2, 3];
+
+    document.getElementById(`ex5`).innerHTML = array3[2] + 3;
+    document.getElementById(`ex6`).innerHTML = array3 + 3;
+    // alert([] + 1); // "1"    
+    // alert([1] + 1); // "11"
+    // alert([1, 2] + 1);
+</script>
+
+</html>
