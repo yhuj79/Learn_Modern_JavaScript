@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Called Back</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Javascript Fundamentals</h1>
+    <div class="section">
+        <h1>Called Back</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1">showOk</h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+    </div>
+</body>
+
+<script>
+    let count = 0;
+
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    function showOk() {
+        count++;
+        document.getElementById(`ex${count}`).innerHTML = "showOk";
+    }
+
+    function showCancel() {
+        count++;
+        document.getElementById(`ex${count}`).innerHTML = `showCancel ${count}`;
+        ask("showCancel Count (MAX 5)", showOk, showCancel);
+    }
+    
+    ask("showCancel Count (MAX 5)", showOk, showCancel);
+</script>
+
+</html>
