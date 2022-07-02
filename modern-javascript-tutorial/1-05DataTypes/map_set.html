@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Set</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Map, Set</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+    </div>
+</body>
+
+<script>
+    let recipeMap = new Map([
+        ['cucumber', 500],
+        ['tomatoes', 350],
+        ['onion', 50]
+    ]);
+    recipeMap.forEach((value, key, map) => {
+        document.getElementById(`ex1`).innerHTML += `${key} : ${value}<br />`;
+    });
+
+    let set = new Set();
+    let john = { name: "John" };
+    let pete = { name: "Pete" };
+    let mary = { name: "Mary" };
+
+    // 어떤 고객(john, mary)은 여러 번 방문할 수 있습니다.
+    set.add(john);
+    set.add(pete);
+    set.add(mary);
+    set.add(john);
+    set.add(mary);
+
+    // 셋에는 유일무이한 값만 저장됩니다.
+    document.getElementById(`ex2`).innerHTML = `set size = ${set.size}`; // 3
+
+    for (let user of set) {
+        document.getElementById(`ex3`).innerHTML += `${user.name}<br />`;
+        // John, Pete, Mary 순으로 출력됩니다.
+    }
+</script>
+
+</html>

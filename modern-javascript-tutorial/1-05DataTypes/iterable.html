@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterable</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Iterable</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+        <h2 id="ex6"></h2>
+    </div>
+</body>
+
+<script>
+    let str = "Hello";
+    document.getElementById(`ex1`).innerHTML = "Normal : " + str;
+
+    let iterator = str[Symbol.iterator]();
+    document.getElementById(`ex2`).innerHTML += "Iterator : ";
+
+    while (true) {
+        let result = iterator.next();
+        if (result.done) break;
+        document.getElementById(`ex2`).innerHTML += result.value; // 글자가 하나씩 출력됩니다.
+    }
+
+    // 유사 배열
+    let fruit = {
+        0: "사과",
+        1: "배",
+        2: "수박",
+        3: "키위",
+        4: "포도",
+        5: "딸기",
+        6: "토마토",
+        length: 7
+    };
+
+    // 범용 메서드 Array.from는 이터러블이나 유사 배열을 받아 ‘진짜’ Array를 만들어줍니다. 
+    let arrayFrom = Array.from(fruit);
+    document.getElementById(`ex3`).innerHTML = fruit;
+    document.getElementById(`ex4`).innerHTML = arrayFrom;
+</script>
+
+</html>

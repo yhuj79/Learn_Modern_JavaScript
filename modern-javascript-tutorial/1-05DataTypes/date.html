@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Title</h1>
+    <div class="section">
+        <h1>Date</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+        <h2 id="ex4"></h2>
+        <h2 id="ex5"></h2>
+    </div>
+</body>
+
+<script>
+    let now = new Date();
+    document.getElementById("ex1").innerHTML = now;
+
+    document.getElementById("ex2").innerHTML =
+        `${now.getFullYear()}.${now.getMonth() + 1}.${now.getDate()} 
+        ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+</script>
+
+</html>

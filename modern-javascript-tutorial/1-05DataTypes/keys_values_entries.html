@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keys, Values, Entries</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Title</h1>
+    <div class="section">
+        <h1>Keys, Values, Entries</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <div style="display: flex">
+            <h2 id="ex3"></h2>
+            <h2 id="ex4"></h2>
+        </div>
+        <h2 id="ex5"></h2>
+    </div>
+</body>
+
+<script>
+    let dataKVE = {
+        title: "Keys, Values, Entries",
+        name: "yhuj79",
+        email: "123123@gmail.com",
+    }
+    for (let useValues of Object.values(dataKVE)) {
+        document.getElementById("ex1").innerHTML += `${useValues}<br />`;
+    }
+    for (let useEntries of Object.entries(dataKVE)) {
+        document.getElementById("ex2").innerHTML += `${useEntries}<br />`;
+    }
+
+    let fruit = {
+        0: "사과",
+        1: "배",
+        2: "수박",
+        3: "키위",
+        4: "포도",
+        5: "딸기",
+        6: "토마토",
+        length: 7
+    };
+    for (let fruitNumber of Object.keys(fruit)) {
+        document.getElementById("ex3").innerHTML += `${fruitNumber} :&emsp;<br />`;
+    }
+    for (let fruitName of Object.values(fruit)) {
+        document.getElementById("ex4").innerHTML += `${fruitName}<br />`;
+    }
+
+    let arrayFruit = Array.from(fruit);
+    arrayFruit.push("오렌지");
+
+    document.getElementById(`ex5`).innerHTML = arrayFruit;
+</script>
+
+</html>
