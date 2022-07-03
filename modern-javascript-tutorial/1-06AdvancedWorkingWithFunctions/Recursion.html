@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Advanced Working With Functions</h1>
+    <div class="section">
+        <h1>Recursion</h1>
+    </div>
+    <div class="section">
+        <div>
+            <h2>None Recursion</h2>
+            <input id="inputX" type="text" placeholder=" x"></input>^
+            <input id="inputN" type="text" placeholder=" n"></input>
+            <button class="button" onclick=Calcul()>계산</button>
+            <h2 id="ex1"></h2>
+        </div>
+        <div>
+            <h2>Recursion</h2>
+            <input id="inputXrec" type="text" placeholder=" x"></input>^
+            <input id="inputNrec" type="text" placeholder=" n"></input>
+            <button class="button" onclick=CarculRecursion()>계산</button>
+            <h2 id="ex2"></h2>
+        </div>
+    </div>
+</body>
+
+<script>
+    function Calcul() {
+        let x = document.getElementById("inputX").value;
+        let n = document.getElementById("inputN").value;
+        let result = 1;
+
+        for (let i = 0; i < n; i++) {
+            result *= x;
+        }
+
+        console.log(`${x} ^ ${n} = ${result}`);
+        document.getElementById("ex1").innerHTML = `= ${result}`;
+    }
+
+    function CarculRecursion() {
+        let rx = document.getElementById("inputXrec").value;
+        let rn = document.getElementById("inputNrec").value;
+
+        function Recursion(rx, rn) {
+            if (rn == 1) {
+                return rx;
+            } else {
+                return rx * Recursion(rx, rn - 1);
+            }
+        }
+
+        console.log(`${rx} ^ ${rn} = ${Recursion(rx, rn)}`);
+        document.getElementById("ex2").innerHTML = `= ${Recursion(rx, rn)}`;
+    }
+</script>
+
+</html>
