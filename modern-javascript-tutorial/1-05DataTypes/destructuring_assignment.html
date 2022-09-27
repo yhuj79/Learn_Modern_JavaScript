@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Data Types</h1>
+    <div class="section">
+        <h1>Destructuring Assignment</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+        <h2 id="ex3"></h2>
+    </div>
+    <textarea id="ex3"></textarea>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+let arr = ["apple", "banana", "tomato", "pear", "grapes", "mango"]
+let user = {
+    name: "James",
+    job: "developer",
+    age: 28
+};
+
+let [one, two, three, ...other] = arr; // four ~ six는 other에 저장됨
+let { name: a, ...rest } = user;
+
+console.log(`${one}, ${two}, ${three}`) // apple, banana, tomato
+console.log(`나머지 : ${other}`) // 나머지 : pear,grapes,mango
+console.log(`job: ${rest.job}, age: ${rest.age}`) // job: developer, age: 28
+
+    axios({
+        url: 'https://jsonplaceholder.typicode.com/users',
+        method: 'get',
+    })
+        .then(function (response) {
+            console.log(JSON.stringify(response.data, null, 5))
+            for (let [key, value] of Object.entries(response.data)) {
+                console.log(`id : ${key}\nname : ${value.name}`);
+            }
+        })
+
+</script>
+
+</html>

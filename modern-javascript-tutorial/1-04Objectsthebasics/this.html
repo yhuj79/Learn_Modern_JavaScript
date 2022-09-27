@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+    <link rel="stylesheet" href="../globalStyles.css">
+</head>
+
+<body>
+    <h1 class="header">Objects The Basics</h1>
+    <div class="section">
+        <h1>This</h1>
+    </div>
+    <div class="section">
+        <h2 id="ex1"></h2>
+        <h2 id="ex2"></h2>
+    </div>
+</body>
+
+<script>
+    let user = {
+        name: "John",
+        age: 30,
+
+        sayHi() {
+            // 'this'는 '현재 객체'를 나타냅니다.
+            alert(this.name);
+        }
+
+    };
+
+    user.sayHi();
+</script>
+
+</html>
