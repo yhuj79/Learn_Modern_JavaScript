@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../globalStyles.css">
+    <title>short_circuit_evaluation</title>
+</head>
+
+<body>
+    <div class="section">
+        <h1>09 - short_circuit_evaluation</h1>
+    </div>
+</body>
+
+<script>
+    const dog = {
+        name: '멍멍이'
+    };
+
+    function getName(animal) {
+        const name = animal && animal.name;
+        if (!name) {
+            return '이름이 없는 동물입니다';
+        }
+        return name;
+    }
+
+    const name = getName();
+    console.log(name);
+</script>
+
+</html>
