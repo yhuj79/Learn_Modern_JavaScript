@@ -34,11 +34,11 @@
     );
 
     // 함수 표현식
-    function funcName(name) {
+    let funcName = function(name) {
         const printDivOne = document.querySelector(".printDivOne");
         printDivOne.innerHTML = `안녕하세요, ${name} 입니다.`;
     }
-    function funcBirth(birth) {
+    let funcBirth = function(birth) {
         const printDivTwo = document.querySelector(".printDivTwo");
         printDivTwo.innerHTML = `생일은 ${birth} 입니다.`;
     }
