@@ -1,7 +1,11 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString().trim();
+let readline = require("readline");
 
-// let input: String = "typescript test";
+let rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-console.log(input);
+rl.question("Input Text -> ", function (input: number) {
+  console.log(`${input} x ${input} = ${input * input}`);
+  rl.close();
+});
