@@ -1,11 +1,12 @@
-let readline = require("readline");
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().trim().split("\n");
 
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let arr: number[] = [];
 
-rl.question("Input Text -> ", function (input: number) {
-  console.log(`${input} x ${input} = ${input * input}`);
-  rl.close();
-});
+for (let i = 0; i < input.length; i++) {
+  let inf: number = Number(input[i]);
+  arr.push(inf);
+}
+
+console.log(arr);
