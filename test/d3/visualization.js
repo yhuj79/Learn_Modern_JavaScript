@@ -108,19 +108,34 @@ async function updateVisualization(array) {
   return new Promise((resolve) => setTimeout(resolve, 100));
 }
 
-function startSorting(algorithm) {
+async function startSorting(algorithm) {
   // Reset the dataset to the original state
   dataset = [...originalDataset];
 
   // Re-render the initial dataset
   renderDataset(dataset);
 
+  // Clear previous time display
+  document.getElementById("time-display").innerText = "";
+
+  // Start the timer
+  const startTime = performance.now();
+
   // Start the selected sorting algorithm
   if (algorithm === "bubble") {
-    bubbleSort(dataset);
+    await bubbleSort(dataset);
   } else if (algorithm === "insertion") {
-    insertionSort(dataset);
+    await insertionSort(dataset);
   } else if (algorithm === "selection") {
-    selectionSort(dataset);
+    await selectionSort(dataset);
   }
+
+  // End the timer
+  const endTime = performance.now();
+  const elapsedTime = ((endTime - startTime) / 1000).toFixed(2);
+
+  // Display the elapsed time
+  document.getElementById(
+    "time-display"
+  ).innerText = `Time taken by ${algorithm} sort: ${elapsedTime} seconds`;
 }
